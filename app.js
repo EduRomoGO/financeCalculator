@@ -1,6 +1,7 @@
 'use strict';
 
 var Calculator = require('./Calculator'),
+		classInspector = require('./classInspector'),
 		tin = 5,
 		interestsPaymentFrequency = 1,
 		tae;
@@ -12,14 +13,4 @@ var myCalc = new Calculator();
 tae = myCalc.calculateTae(tin, interestsPaymentFrequency);
 console.log(tae);
 
-function xinspect(o,i){
-    if(typeof i=='undefined')i='';
-    if(i.length>50)return '[MAX ITERATIONS]';
-    var r=[];
-    for(var p in o){
-        var t=typeof o[p];
-        r.push(i+'"'+p+'" ('+t+') => '+(t=='object' ? 'object:'+xinspect(o[p],i+'  ') : o[p]+''));
-    }
-    return r.join(i+'\n');
-}
-console.log('myCalc: ' + xinspect(myCalc));
+classInspector(myCalc);
