@@ -3,8 +3,7 @@
 // var IRPF = 20%;
 // tae cuenta 123 2.8%
 
-function Calculator() {
-}
+var Calculator = function () {};
 
 Calculator.prototype.calculate = function(savings, taxes, comission, tin) {
 	// var taxesNumber = parseInt(taxes.slice(0,2));
@@ -23,4 +22,4 @@ Calculator.prototype.calculateTae = function(tin, interestsPaymentFrequency) {
 	return taeRounded;
 };
 
-module.exports.calc = Calculator;
+module.exports = Calculator;
