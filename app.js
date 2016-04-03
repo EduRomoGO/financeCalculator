@@ -6,11 +6,9 @@ var Calculator = require('./Calculator'),
 		interestsPaymentFrequency = 1,
 		tae;
 
-//for (var property in calc) loop();
-
 var myCalc = new Calculator();
 
 tae = myCalc.calculateTae(tin, interestsPaymentFrequency);
-console.log(tae);
+console.log('The TAE calculated is: ' + tae);
 
-classInspector(myCalc);
+//classInspector(myCalc);
